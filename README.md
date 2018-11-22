@@ -3,3 +3,7 @@
 Description
 ---
 A simple snake game in p5.js
+
+License
+---
+MIT - Read `LICENSE`
