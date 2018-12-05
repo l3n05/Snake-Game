@@ -141,6 +141,7 @@ function gameEnded() {
 // checks if the snake head collapsed with the tail or went out of canva's borders
 // if not, then it just keeps moving forward else, the game ends
 function update() {
+<<<<<<< HEAD
   let xCoor,yCoor;
   xCoor = tail[0].getX();
   yCoor = tail[0].getY();
@@ -157,6 +158,24 @@ function update() {
     tail.unshift(new Block(xCoor + speed_x, yCoor + speed_y, 20));
     tail.pop();
   }
+=======
+	let xCoor,yCoor;
+	xCoor = tail[0].getX();
+	yCoor = tail[0].getY();
+	for(let i = 1; i < tail.length; i++) {
+		if((xCoor == tail[i].x) && (yCoor == tail[i].y)) {
+			collapsed = true;
+			break;
+		}
+	}
+	if(tail[0].x >= width - 20 || tail[0].y >= height - 20 || tail[0].x < 0 + 20 || tail[0].y < 0 + 20 || collapsed == true) {
+		gameEnded();
+	}
+	else {
+		tail.unshift(new Block(xCoor + speed_x, yCoor + speed_y, 20));
+		tail.pop();
+	}
+>>>>>>> 14b8334aad815f88bddcb8d79e48a05a16ee6ee9
 }
 
 // executes continuously until the program stops
