@@ -151,8 +151,8 @@ function update() {
 		gameEnded();
 	}
 	else {
-			tail.unshift(new Block(xCoor + speed_x, yCoor + speed_y, 20));
-			tail.pop();
+		tail.unshift(new Block(xCoor + speed_x, yCoor + speed_y, 20));
+		tail.pop();
 	}
 }
 
